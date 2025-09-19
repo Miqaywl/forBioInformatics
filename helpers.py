@@ -3,7 +3,8 @@ from collections import Counter
 
 def read_code_from_file(file_name: str):
     with open(file_name, 'r') as code:
-        return code.read()
+        lines = code.readlines()
+        return ''.join(lines[1:])
 
 
 class DNA_helpers:
@@ -29,3 +30,4 @@ class DNA_helpers:
             return True
         else:
             return False
+
