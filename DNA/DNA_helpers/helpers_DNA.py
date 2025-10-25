@@ -30,4 +30,3 @@ class DNA_helpers:
             return True
         else:
             return False
-
