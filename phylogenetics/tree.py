@@ -19,7 +19,8 @@ def phylogenetics(file: str):
     constructor = DistanceTreeConstructor(calculator)
     tree = constructor.build_tree(alignment)
     tree.ladderize()
-
+    distance_matrix = calculator.get_distance(alignment)
+    print(distance_matrix)
     fig = plt.figure(figsize=(20, 5), dpi=100)
     matplotlib.rc('font', size=10)
     matplotlib.rc('xtick', labelsize=10)
